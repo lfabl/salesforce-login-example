@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="account_type">com.test.slsfrc.login</string>
+	<string name="app_name">TestSlsFrc</string>
+	<string name="app_package">com.test.slsfrc</string>
+</resources>
