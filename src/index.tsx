@@ -36,6 +36,9 @@ import GlobalStateProvider, {
 } from './context';
 import Toast from 'react-native-simple-toast';
 import storage from './storage';
+import {
+    getKeyAndValuesFromURLString 
+} from './util';
 
 const GlobalStateContextAPI = () => {
     const [globalState, setGlobalState] = useGlobalState();
@@ -50,14 +53,16 @@ const GlobalStateContextAPI = () => {
 
     const handleUri = (event) => {
         try {
-            const access_token = decodeURIComponent(event.url).split('#')[1].split("&")[0].split("=")[1];
-            if(!access_token) {
+            const response = getKeyAndValuesFromURLString(decodeURIComponent(event.url).split('#')[1]);
+            if(!response.access_token) {
                 throw new Error("Token is invalid.");
             }
 
-            storage.set("token", access_token);
+            storage.set("token", response.access_token);
+            storage.set("refreshToken", response.refresh_token);
             setGlobalState({
-                accessToken: access_token
+                accessToken: response.access_token,
+                refreshToken: response.refresh_token
             });
         } catch(e) {
             Toast.show("An error exception: " + e.message, Toast.LONG);

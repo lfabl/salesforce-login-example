@@ -10,6 +10,7 @@
 	    android:label="@string/app_name"
 		android:name=".MainApplication"
 		android:manageSpaceActivity="com.salesforce.androidsdk.ui.ManageSpaceActivity"
+        android:requestLegacyExternalStorage="true"
 		android:usesCleartextTraffic="true">
 
 		<!-- Launcher screen -->
@@ -111,4 +112,7 @@
 
     <uses-permission android:name="com.test.slsfrc.C2D_MESSAGE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
 </manifest>

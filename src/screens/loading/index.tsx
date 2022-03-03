@@ -13,10 +13,13 @@ import {
     useGlobalState 
 } from '../../context';
 import storage from '../../storage';
+import {
+    refreshToken 
+} from '../../api';
 
 const Loading = () => {
     const navigation = useNavigation();
-    const [globalState] = useGlobalState();
+    const [globalState, setGlobalState] = useGlobalState();
 
     useEffect(() => {
         navigation.setOptions({
@@ -28,7 +31,22 @@ const Loading = () => {
             navigation.navigate("login");
         }
 
-        // TODO: If token already taken, a new one will be received via the refresh token then redirect to home page. ( auto login on initial. )
+        /*
+        refreshToken({
+            accessToken: storageToken
+        })
+            .then((newAccessToken) => {
+                storage.set("token", newAccessToken);
+                setGlobalState({
+                    accessToken: newAccessToken
+                });
+            })
+            .catch(err => {
+                if(err.error === "logout") {
+                    navigation.navigate("login");
+                }
+            });
+        */
     }, []);
 
     return <View
