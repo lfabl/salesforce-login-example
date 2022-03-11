@@ -26,14 +26,13 @@ const Loading = () => {
             header: () => null
         });
 
-        const storageToken = storage.getString("token");
+        const storageToken = storage.getString("refreshToken");
         if(!storageToken) {
             navigation.navigate("login");
         }
 
-        /*
         refreshToken({
-            accessToken: storageToken
+            refreshToken: storageToken
         })
             .then((newAccessToken) => {
                 storage.set("token", newAccessToken);
@@ -42,11 +41,10 @@ const Loading = () => {
                 });
             })
             .catch(err => {
-                if(err.error === "logout") {
+                if(err.toString() === "invalid_grant") {
                     navigation.navigate("login");
                 }
             });
-        */
     }, []);
 
     return <View

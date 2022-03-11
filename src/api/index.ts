@@ -89,6 +89,10 @@ export const refreshToken = ({
             method: "POST"
         })
             .then((res) => {
+                if(res.error) {
+                    reject(res.error);
+                    return;
+                }
                 resolve(res.access_token);
             })
             .catch((err) => {

@@ -15,6 +15,7 @@
     "dependencies": {
         "@react-native-community/checkbox": "^0.5.9",
         "@react-native-community/masked-view": "^0.1.10",
+        "@react-navigation/bottom-tabs": "^6.2.0",
         "@react-navigation/native": "^6.0.2",
         "@react-navigation/stack": "^6.0.7",
         "create-react-class": "^15.7.0",
@@ -23,10 +24,15 @@
         "react-native-document-picker": "^8.0.0",
         "react-native-force": "git+https://github.com/forcedotcom/SalesforceMobileSDK-ReactNative.git#v10.0.0",
         "react-native-gesture-handler": "^1.10.3",
+        "react-native-maps": "^0.30.1",
         "react-native-mmkv": "^2.1.0",
+        "react-native-portalize": "^1.0.7",
         "react-native-safe-area-context": "^3.3.0",
         "react-native-screens": "^3.6.0",
+        "react-native-select-dropdown": "^1.8.0",
         "react-native-simple-toast": "^1.1.3",
+        "react-native-snap-carousel": "^3.9.1",
+        "react-native-svg": "^12.3.0",
         "react-native-webview": "^11.17.2",
         "rn-fetch-blob": "^0.12.0"
     },
@@ -39,6 +45,7 @@
         "@types/react": "^17.0.19",
         "@types/react-native": "^0.66.12",
         "@types/react-test-renderer": "^17.0.1",
+        "@typescript-eslint/parser": "^3.10.1",
         "babel-jest": "^26.6.3",
         "eslint": "^7.15.0",
         "jest": "^26.6.3",
@@ -47,6 +54,7 @@
         "react-test-renderer": "17.0.2",
         "rimraf": "3.0.2",
         "ts-jest": "^26.4.4",
+        "ts-standard": "^11.0.0",
         "typescript": "^4.1.2"
     },
     "jest": {

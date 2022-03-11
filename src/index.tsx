@@ -39,6 +39,9 @@ import storage from './storage';
 import {
     getKeyAndValuesFromURLString 
 } from './util';
+import {
+    Host
+} from 'react-native-portalize';
 
 const GlobalStateContextAPI = () => {
     const [globalState, setGlobalState] = useGlobalState();
@@ -74,7 +77,9 @@ const GlobalStateContextAPI = () => {
 
 const App = () => {
     return <GlobalStateProvider>
-        <GlobalStateContextAPI/>
+        <Host>
+            <GlobalStateContextAPI/>
+        </Host>
     </GlobalStateProvider>;
 };
 export default App;

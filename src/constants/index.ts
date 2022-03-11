@@ -1,4 +1,4 @@
-export const MAIN_URL = "https://gablesinsurancerecovery.force.com";
+export const MAIN_URL = "https://sbox-gablesinsurancerecovery.cs1.force.com";
 export const SERVICE_VERSION = "54.0";
 export const SERVICE_URL = `${MAIN_URL}/services/data/v${SERVICE_VERSION}/sobjects`;
 export const AUTHORIZATION_URL = `${MAIN_URL}/services/oauth2/authorize`;
